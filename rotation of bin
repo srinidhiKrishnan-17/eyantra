@@ -56,11 +56,11 @@ void loop()
         }
       else if(digitalRead(0)==HIGH) //if bio-degradable is detected 
         {
-           myStepper.step(-60);             // tell stepper to go to position of bin of plastic.
+           myStepper.step(-60);             // tell stepper to go to position of bin of biodegradable.
            myservo.write(120);              // tell servo to go to position 120(open).
            delay(3000);
            myservo.write(50);               // tell servo to go to position 50(close).
-           myStepper.step(60);              // tell stepper to go to position of bin of plastic.
+           myStepper.step(60);              // tell stepper to go to position of bin of biodegradable.
         }
       else //it is plastic
         {
